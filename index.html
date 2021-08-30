@@ -92,6 +92,13 @@
       
       transition: all .2s;
     }
+
+    .overflow {
+      overflow: scroll;
+    }
+    .martop {
+      margin-top: 200px;
+    }
     p.ppage {
       background: #eee;
       padding: 8px 15px;
@@ -148,7 +155,7 @@
       opacity: .7;
     }
     .transition {
-      transform: scale(120%);
+      transform: scale(140%);
     }
     img {
       vertical-align: middle;
@@ -514,6 +521,8 @@
       <div class="pprev bpr34"><img src="/arrow.svg"></div>
       <div class="pprev bpr35"><img src="/arrow.svg"></div>
       <div class="pprev bpr36"><img src="/arrow.svg"></div>
+
+      <div class="pages">
       <div class="first katalogos fade p1">
         <img src="/pages/1.jpg">
       </div>
@@ -553,6 +562,7 @@
       <div class="katalogos fade p35">
         <img src="/pages/68.jpg" style="width:50%;margin:auto; display:flex; float:none;">
       </div>
+    </div>
     </div>
   </div>
   <br>
@@ -992,6 +1002,8 @@
     });
     $(".zoom").click(function () {
       $(".fade").toggleClass("transition")
+      $("body").toggleClass("overflow")
+      $(".pages").toggleClass("martop")
     });
     
     //NEXT
